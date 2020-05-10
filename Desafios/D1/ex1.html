@@ -10,17 +10,20 @@
 <body>
 
     <script>
-        var endereco = {
-            rua: "Rua dos pinheiros",
-            num: 1293,
-            bairro: "Centro",
-            cidade: "São Paulo",
-            uf: "SP"
-        };
-        console.log("O usuário mora em " + endereco.cidade +
-            " / " + endereco.uf + ", no bairro " + endereco.bairro +
-            " na " + endereco.rua + " no numero " + endereco.num
-        );
+        function local() {
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                num: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+        }
+        console.log(local(endereco.rua));
+        // console.log("O usuário mora em " + endereco.cidade +
+        //     " / " + endereco.uf + ", no bairro " + endereco.bairro +
+        //     " na " + endereco.rua + " no numero " + endereco.num
+        // );
     </script>
 </body>
 
