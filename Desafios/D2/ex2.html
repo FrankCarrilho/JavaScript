@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <h1>Questão 2</h1>
+    <hr>
+    <p>Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+    </p>
+    <hr>
+    <h1 id="texto">♥ </h1>
+    <script>
+        // function getRandomColor() {
+        //     var letters = "0123456789ABCDEF";
+        //     var color = "#";
+        //     for (var i = 0; i < 6; i++) {
+        //         color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     return color;
+        // }
+
+        // var newColor = getRandomColor();
+        var labelElement = document.createElement('text');
+        labelElement.setAttribute('type', '');
+
+        var txtElement = document.createTextNode('Clique aqui');
+        labelElement.appendChild(txtElement);
+
+        var container = document.querySelector('#texto');
+        container.appendChild(txtElement);
+
+        labelElement.onmouseover = function() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+
+</html>
