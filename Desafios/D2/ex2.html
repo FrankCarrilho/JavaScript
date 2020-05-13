@@ -13,28 +13,40 @@
     <p>Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
     </p>
     <hr>
-    <h1 id="texto">♥ </h1>
-    <button onmousemove="getRandomColor()"></button>
+    <div id="app">
+        <!-- <h1 id="texto" onmousemove="acao()">texto </h1> -->
+        <div id="box"></div>
+    </div>
     <script>
-        function getRandomColor() {
-            var letters = "0123456789ABCDEF";
-            var color = "#";
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
+        // function acao() {
+        //     alert("passou o mouse no texto");
+        // }
 
-        var newColor = getRandomColor();
+        var boxElement = document.getElementById('app');
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#f00';
 
-        var labelElement = document.createElement('text');
-        labelElement.setAttribute('type', '');
 
-        var txtElement = document.createTextNode('Clique aqui');
-        labelElement.appendChild(txtElement);
+        // function getRandomColor() {
+        //     var letters = "0123456789ABCDEF";
+        //     var color = "#";
+        //     for (var i = 0; i < 6; i++) {
+        //         color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     return color;
+        // }
 
-        var container = document.querySelector('#texto');
-        container.appendChild(txtElement);
+        // var newColor = getRandomColor();
+
+        // var labelElement = document.createElement('text');
+        // labelElement.setAttribute('type', '');
+
+        // var txtElement = document.createTextNode('Clique aqui');
+        // labelElement.appendChild(txtElement);
+
+        // var container = document.querySelector('#texto');
+        // container.appendChild(txtElement);
 
         // labelElement.onmouseover = function() {
         //     var letters = "0123456789ABCDEF";
